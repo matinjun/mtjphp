@@ -1,10 +1,11 @@
 <?php 
-$hostname = "localhost"; //Ö÷»úÃû,¿ÉÒÔÓÃIP´úÌæ
-$database = "test"; //Êý¾Ý¿âÃû
-$username = "root"; //Êý¾Ý¿âÓÃ»§Ãû
-$password = ""; //Êý¾Ý¿âÃÜÂë
-$conn = mysqli_connect($hostname, $username, $password) or trigger_error(mysql_error() , E_USER_ERROR); 
-mysqli_select_db($conn,$database ); 
-$db = @mysqli_select_db($conn,$database) or die(mysqli_error());
+$hostname = "localhost"; //ä¸»æœºå,å¯ä»¥ç”¨IPä»£æ›¿
+$database = "test"; //æ•°æ®åº“å
+$username = "root"; //æ•°æ®åº“ç”¨æˆ·å
+$password = ""; //æ•°æ®åº“å¯†ç 
+$conn = mysqli_connect($hostname, $username, $password, $database) or trigger_error(mysql_error() , E_USER_ERROR); 
+//mysqli_select_db($conn,$database ); // mysqli_select_db(connection,dbname); æ›´æ”¹æ•°æ®åº“
+
+$db = mysqli_select_db($conn,$database) or die(mysqli_error());
 
 ?> 

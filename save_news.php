@@ -1,6 +1,6 @@
 <?php
 include ("conn.php");
-mysqli_query("set names gb2312");
+mysqli_query($conn, "set names gb2312"); // mysqli_query(connection, query)
 
 error_reporting(0); 
 //下面先接收从add_news.php传过来的新闻标题与新闻内容.
@@ -13,12 +13,11 @@ $content=$_POST[content];  //同上,保存新闻内容值.
 if(function_exists('date_default_timezone_set')) { 
    date_default_timezone_set('Hongkong');//该函数为PHP5.1内置. 
 } 
-$add_time=date("Y-m-d");
-   //这句话把获取到的系统当前时间赋给变量$add_time
+$add_time=date("Y-m-d"); //这句话把获取到的系统当前时间赋给变量$add_time
    
 $sql = "INSERT INTO news (title,content,add_time) VALUES ('$title','$content','$add_time')";
 
-$result = @mysql_query($sql,$conn) or die(mysqli_error($conn));  //如果添加成功,返回真给$result ,否则为false.
+$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));  //如果添加成功,返回真给$result ,否则为false.
 
 if($result)
 {
