@@ -16,7 +16,7 @@ if(function_exists('date_default_timezone_set')) {
 $add_time=date("Y-m-d"); //这句话把获取到的系统当前时间赋给变量$add_time
    
 // sql语句也没有问题
-$sql = "INSERT INTO news (title,content,add_time) VALUES ('$title','$content','$add_time')";
+$sql = "INSERT INTO news(title,content,add_time) VALUES ('$title','$content','$add_time')";
 
 // 运行显示代码运行成功
 if (mysqli_connect_errno($conn)) 
