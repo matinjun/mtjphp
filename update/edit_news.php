@@ -13,14 +13,14 @@ margin:0px;
 
 <body>
 <?php 
-include ("conn.php");
-mysql_query("set names gb2312");
-$id=$_GET[id];   //先接收从news.php传过来的ID值以确定要修改的新闻
+include ("../conn.php");
+mysqli_query($conn, "set names utf8");
+$id=$_GET["id"];   //先接收从news.php传过来的ID值以确定要修改的新闻
 //接着查出该新闻有关数据.
 $query = "select * from news where id=$id";  
-$res = mysql_query($query, $conn) or die(mysql_error());
-$row = mysql_num_rows($res);    //如果查询成功这里返回真否则为假
-$dbrow=mysql_fetch_array($res);
+$res = mysqli_query($conn, $query);
+$row = mysqli_num_rows($res);    //如果查询成功这里返回真否则为假
+$dbrow=mysqli_fetch_array($res);
 $id=$dbrow['id']; 
 $title=$dbrow['title']; 
 $content=$dbrow['content'];  

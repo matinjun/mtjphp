@@ -9,3 +9,5 @@
 * **mysqli_num_rows(result)** 函数返回结果集中行的数量
 * **mysqli_fetch_assoc(result)** 函数从结果集中取得一行作为关联数组，该函数返回的字段名是区分大小写的。
 * **mysqli_fetch_array(result, [option])** 函数从结果集中取得一行作为关联数组，或数字数组，或二者兼有
+## php知识
+* 使用get，post传值的[用法](https://blog.csdn.net/weixin_39450145/article/details/74852645)，在[edit_news.php](./update/edit_news.php)中18行附近应使用$id=$_GET["id"]
