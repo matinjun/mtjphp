@@ -1,15 +1,15 @@
 <?php 
 include ("conn.php");
-mysql_query("set names gb2312");
-echo "下面为查询标题中有信工学院四个字的的新闻数据.<br>";
-$query = "select * from news where title like '%信工学院%'";    //这样可能有很多标题包含有这四个字的新闻都会显示出来. 大家可以添加多几条新闻试试.还可以用OR 或AND 限制更多查询条件.
-$res = mysql_query($query, $conn) or die(mysql_error());
-$row = mysql_num_rows($res);    //如果查询成功这里返回真否则为假
+mysqli_query($conn, "set names utf8");
+echo "下面为查询id在1到3的范围.<br>";
+$query = "select * from news where id >= 1 and id <= 2";    //这样可能有很多标题包含有这四个字的新闻都会显示出来. 大家可以添加多几条新闻试试.还可以用OR 或AND 限制更多查询条件.
+$res = mysqli_query($conn, $query);
+$row = mysqli_num_rows($res);    //返回查询到的结果数
 if($row)
 {
 for($i=0;$i<$row;$i++)            //这里用一个FOR 语句查询显示多条结果
 { 
-$dbrow=mysql_fetch_array($res);
+$dbrow=mysqli_fetch_array($res);
 $id=$dbrow['id']; 
 $title=$dbrow['title']; 
 $content=$dbrow['content']; 
@@ -32,5 +32,5 @@ else
 {
 echo "无相关数据";
 }
-
-?>// 到此就结束了数据查询的学习
+// 到此就结束了数据查询的学习
+?>
