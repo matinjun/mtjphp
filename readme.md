@@ -11,3 +11,5 @@
 * **mysqli_fetch_array(result, [option])** 函数从结果集中取得一行作为关联数组，或数字数组，或二者兼有
 ## php知识
 * 使用get，post传值的[用法](https://blog.csdn.net/weixin_39450145/article/details/74852645)，在[edit_news.php](./update/edit_news.php)中18行附近应使用$id=$_GET["id"]
+## js知识
+* **window.location.href = document.referrer**用于返回上一个页面并刷新，[更多](https://www.jianshu.com/p/a89e701a53e3)
