@@ -1,6 +1,6 @@
 <?php
 include ("conn.php");
-//mysqli_query($conn, "set names gb2312"); // mysqli_query(connection, query)
+mysqli_query($conn, "set names utf8"); // mysqli_query(connection, query)
 
 error_reporting(0); 
 //下面先接收从add_news.php传过来的新闻标题与新闻内容.

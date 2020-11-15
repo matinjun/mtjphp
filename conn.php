@@ -8,8 +8,8 @@ $conn = mysqli_connect($hostname, $username, $password, $database);// or trigger
 if ($conn->connect_error) {
     die("连接失败: " . $conn->connect_error);
 } 
-echo "连接成功";
-mysqli_query($conn, "INSERT INTO news(title,content,add_time) VALUES ('asdaf',' dsas','2020-11-10')") or die(mysqli_error($conn));
+// 下面代码是测试是否连接成功，并可以插入一项
+//mysqli_query($conn, "INSERT INTO news(title,content,add_time) VALUES ('asdaf',' dsas','2020-11-10')") or die(mysqli_error($conn));
 //$db = mysqli_select_db($conn,$database) or die(mysqli_error($conn));
 
 ?> 
