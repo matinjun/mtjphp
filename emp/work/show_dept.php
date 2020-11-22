@@ -25,6 +25,7 @@ if($row)
 		//echo $loc; 
 		//echo "  ";
         echo "<td><a href='del_dept.php?depto=$depto'><font color='red'>删除</font></a></td>>";
+        // 此处需要传递多个值，使用&连接
         echo "<td><a href='edit_dept.php?depto=$depto&dname=$dname&loc=$loc'><font color='blue'>修改</font></a></td>";
         echo "</tr>";
 		echo "<br>";

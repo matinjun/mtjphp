@@ -14,7 +14,6 @@ $oldLOC = $_POST["old_loc"];
    
 // sql语句也没有问题
 $sql = "UPDATE dept set DEPTO=$DEPTO, DNAME='$DNAME', LOC='$LOC' where DEPTO=$oldDEPTO and DNAME='$oldDNAME' and LOC='$oldLOC'";
-echo $sql;
 
 // sql语言没有错
 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));  //如果添加成功,返回真给$result ,否则为false.

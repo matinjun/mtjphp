@@ -20,6 +20,7 @@ $old_loc=$_GET["loc"];
         DNAME: <input type="text" name="DNAME"><br>
         LOC  : <input type="text" name="LOC"><br>
         <!--隐藏传递了DEPTO-->
+        <!--因为要找以前的，旧标签要加进去-->
         <input type="hidden" name="old_depto" value="<?php echo $old_depto; ?>">
         <input type="hidden" name="old_dname" value="<?php echo $old_dname; ?>">
         <input type="hidden" name="old_loc" value="<?php echo $old_loc; ?>">
