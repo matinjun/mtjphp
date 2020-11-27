@@ -1,0 +1,25 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <title>添加记录</title>
+</head>
+
+<body>
+    <form action="save_emp.php" method="post">
+        <!--意思是以post方式把下面输入的数据传到save_dept.php页面. ,表单以</form>结束-->
+        EMPNO    : <input type="number" name="EMPNO">   <br>
+        ENAME    : <input type="text"   name="ENAME">   <br>
+        JOB      : <input type="text"   name="JOB">     <br>
+        MGR      : <input type="number" name="MGR">     <br>
+        HIREDATE : <input type="text"   name="HIREDATE"><br>
+        SAL      : <input type="number" name="SAL">     <br>
+        COMM     : <input type="number" name="COMM">    <br>
+        DEPTNO   : <input type="number" name="DEPTNO">  <br>
+        <input type="submit" value="执行">
+    </form>
+</body>
+
+</html>
