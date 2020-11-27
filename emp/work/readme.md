@@ -5,3 +5,7 @@
 ```html
 <a href='del_dept.php?depto=$depto'>
 ```
+4. 对齐表格
+```html
+<table align="center">
+```
