@@ -6,7 +6,7 @@ $res = mysqli_query($conn, $query);
 $row = mysqli_num_rows($res);    //如果查询成功这里返回真否则为假
 if($row)
 {
-    echo "<table>";
+    echo "<table align='center'>";
     // 使用表格形式输出
     // 首先打印出表头
     echo "<tr>";
@@ -50,7 +50,6 @@ if($row)
         // 此处需要传递多个值，使用&连接
         echo "<td><a href='edit_emp.php?ENAME=$ENAME'><font color='blue'>修改</font></a></td>";
         echo "</tr>";
-		echo "<br>";
     }
     echo "</table>";
 }

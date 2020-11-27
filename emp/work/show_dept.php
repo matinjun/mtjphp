@@ -6,7 +6,7 @@ $res = mysqli_query($conn, $query);
 $row = mysqli_num_rows($res);    //如果查询成功这里返回真否则为假
 if($row)
 {
-    echo "<table>";
+    echo "<table align='center'>";
     // 使用表格形式输出
     echo "<tr><th>DEPTO</th><th>DNAME</th><th>LOC</th><th></th><th></th></tr>";
 	for($i=0;$i<$row;$i++)            //这里用一个FOR 语句查询显示多条结果
@@ -28,7 +28,6 @@ if($row)
         // 此处需要传递多个值，使用&连接
         echo "<td><a href='edit_dept.php?depto=$depto&dname=$dname&loc=$loc'><font color='blue'>修改</font></a></td>";
         echo "</tr>";
-		echo "<br>";
     }
     echo "</table>";
 }
